@@ -12,7 +12,11 @@ console.log(word.length);
 
 const fruit = "Banaan";
 const vegetable = "Aardappel";
-
+if (fruit.length > vegetable.length) {
+    console.log(true);
+} else {
+    console.log(false);
+}
 
 
 /* Opdracht 2 */
@@ -20,7 +24,14 @@ const vegetable = "Aardappel";
 //  Tip: bedenk 1 manier die voor beide woorden zou werken.
 // ---- Verwachte uitkomst voor fruit: "n"
 // ---- Verwachte uitkomst voor vegetable: "l"
+const lastIndexOfFruit = fruit.length - 1;
+const lastIndexOfVegetable = vegetable.length - 1;
 
+const subFruit = fruit.substring (lastIndexOfFruit);
+const subVegetable = vegetable.substring (lastIndexOfVegetable);
+
+console.log(subFruit);
+console.log(subVegetable);
 
 
 /* Opdracht 3 */
@@ -28,7 +39,8 @@ const vegetable = "Aardappel";
 // ---- Verwachte uitkomst: "De kat krabt de krullen van de trap"
 
 const userInput = "  De kat krabt de krullen van de trap ";
-
+const trimUserInput = userInput.trim();
+console.log(trimUserInput);
 
 
 /* Opdracht 4 */
@@ -36,13 +48,17 @@ const userInput = "  De kat krabt de krullen van de trap ";
 // ---- Verwachte uitkomst: true
 
 const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch, nietwaar?"
-
+const includesStory = story.includes("Fantastisch");
+console.log(includesStory);
 
 
 /* Opdracht 5 */
 // Knip de vraag van bovenstaande tekst (story) af, zodat alleen het eerste gedeelte overblijft en log dit in de terminal.
 // ---- Verwachte uitkomst: "We vinden de behaalde resultaten werkelijk prachtig."
+const indexOfStory = story.indexOf(".");
+const subStory = story.substring(0, indexOfStory+1);
 
+console.log(subStory);
 
 
 /* Opdracht 6 */
@@ -53,7 +69,8 @@ const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch,
 // ---- Verwachte uitkomst: "€35,59"
 
 const price = "$35.59";
-
+const euroPrice = price.replace("$","€").replace(".",",");
+console.log(euroPrice);
 
 
 
